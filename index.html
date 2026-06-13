@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HERE COMES ARSHIYA'S 18TH!</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- MUSIC -->
+  <audio id="bgMusic" loop>
+    <source src="Music/Chillpeach-Frog.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="musicBtn">M</button>
+
+  <!-- GLOBAL PAGE BACK BUTTON -->
+  <button id="backBtn" onclick="goBack()">
+    If You Frog-ot What You Just Saw
+  </button>
+
+  <!-- PAGE 1 -->
+  <section id="page1" class="page active">
+
+    <div id="slideshow"></div>
+    <div class="overlay"></div>
+
+    <div class="content">
+      <h1>Happiest Birthday Arshiya!!!</h1>
+
+      <p>
+        You are the best part of my life. You are literally The God's best creation, 
+a daughter that your family deserved and the type of friend bollywood makes movie to portray. 
+             I hope you enjoy this little collection of efforts.
+      </p>
+
+      <button class="main-btn pink-btn" onclick="goToPage('page2')">
+        Let's Play A Game
+      </button>
+    </div>
+
+  </section>
+
+  <!-- PAGE 2 QUIZ -->
+  <section id="page2" class="page">
+
+    <div class="quiz-container">
+
+      <div class="progress">
+        Question <span id="qNum">1</span> / 18
+      </div>
+
+      <div class="question-box" id="questionBox"></div>
+
+      <div id="hintBox" style="display:none;"></div>
+
+      <input type="text" id="answerInput">
+
+      <button onclick="checkAnswer()">FOUND IT</button>
+      <button onclick="skipQuestion()">I am Bhondu</button>
+      <button onclick="showHint()">Help Me Fizzy</button>
+
+      <!-- QUESTION BACK BUTTON -->
+      <button onclick="prevQuestion()">Pichhla Sawaal</button>
+
+      <p id="feedback"></p>
+
+    </div>
+
+  </section>
+
+ <!-- PAGE 3 -->
+
+<section id="page3" class="page">
+
+  <div id="page3Slideshow"></div>
+  <div class="page3-overlay"></div>
+
+  <!-- LEFT / RIGHT TAP AREAS -->
+
+  <div class="reason-nav-left" onclick="prevReason()"></div>
+  <div class="reason-nav-right" onclick="nextReason()"></div>
+
+  <div class="reason-wrapper">
+
+
+<div class="reason-card">
+
+  <div class="reason-counter">
+    <span id="reasonNumber">1</span> / 18
+  </div>
+
+  <div class="reason-text" id="reasonText">
+    Loading...
+  </div>
+
+  <button
+    id="reasonFinishBtn"
+    class="reason-finish-btn"
+    onclick="finishReasons()"
+    style="display:none;"
+  >
+    CLICK TO RECEIVE A SMOL LETTER OF APPRECIATION
+  </button>
+
+</div>
+
+
+  </div>
+
+</section>
+<!-- PAGE 4 -->
+
+<section id="page4" class="page">
+
+  <div class="letter-hearts"></div>
+
+  <div id="envelopeContainer" class="envelope-container">
+
+    <div class="envelope" onclick="openLetter()">
+
+      <div class="envelope-flap" id="envelopeFlap"></div>
+
+      <div class="envelope-body"></div>
+
+      <div class="seal" id="seal">
+        OPEN ME
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="letterPaper" class="letter-paper">
+
+    <div class="letter-content">
+
+      <h1 class="letter-title">
+        Dear Arshiya,
+      </h1>
+
+      <p id="typedLetter"></p>
+
+      <div class="signature">
+        ~ Agent Frog
+      </div>
+
+      <button
+        id="page4NextBtn"
+        class="page4-next-btn"
+        onclick="goToPage('page5')"
+      >
+        One Last Surprise Awaits
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PAGE 5 -->
+
+<section id="page5" class="page">
+
+  <div class="page5-glow"></div>
+
+  <div id="floatingMemories"></div>
+
+  <div class="page5-content">
+
+    <div id="wishSequence">
+
+      <div class="wish-line">
+        If there is one thing I wish for today...
+      </div>
+
+      <div class="wish-line">
+        I hope you never forget how loved you are.
+      </div>
+
+      <div class="wish-line">
+        By your family.
+      </div>
+
+      <div class="wish-line">
+        By your friends.
+      </div>
+
+      <div class="wish-line">
+        And by one very lucky frog.
+      </div>
+
+      <div class="wish-line">
+        Happiest 18th Birthday, Arshiya.
+      </div>
+
+      <div class="wish-line" id="toastLine">
+        Here's to many more years of smiles, dreams,
+        achievements, chaos, silliness, and love.
+        God bless.
+      </div>
+
+      <div class="wish-line final-thankyou">
+        Thank you for being the happiest chapter of my life.
+      </div>
+
+      <div class="final-message">
+        I LOVEEE YOU! &lt;3
+      </div>
+
+      <div class="final-signature">
+        ~ SHOURYA PANT (Developer)
+      </div>
+
+    </div> <!-- closes wishSequence -->
+
+  </div> <!-- closes page5-content -->
+
+</section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
